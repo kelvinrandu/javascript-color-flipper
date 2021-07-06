@@ -7,14 +7,13 @@ const color = document.querySelector('.color');
 btn.addEventListener('click',function(){  
     let hexColor = '#';
     for(let i = 0; i<6; i++) {
-        hexColor += hex[0];
+        const random = Math.floor(Math.random()* hex.length)
+        hexColor += hex[random];
 
     }
     document.body.style.backgroundColor= hexColor;
     color.textContent= hexColor;
    
-    // const random = Math.floor(Math.random()*colors.length)
-    // document.body.style.backgroundColor= colors[random];
-    // color.textContent= colors[random];
+
    
 })
